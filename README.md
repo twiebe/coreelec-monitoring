@@ -112,5 +112,13 @@ groups:
         for: 5m
 ```
 
+## Grafana
+
+`grafana/coreelec-kodi.json` is a dashboard for these metrics. Import it
+via Dashboards > New > Import and pick the Prometheus data source. Set
+the "Kodi cache memory size" variable to the value configured in Kodi;
+it is drawn as the danger line under the largest free block. Kodi
+restarts and crashes show up as annotations.
+
 Port 9100 has to be reachable; if the CoreELEC firewall is enabled, allow
 it there.
